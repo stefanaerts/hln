@@ -1,2 +1,13 @@
-<p>Story #{{itemID}}
-  <p>
+<div *ngIf="!item" class="loading-section">
+  <!-- You can add a loading indicator here if you want to :) </i> -->
+</div>
+<div *ngIf="item">
+  <div class="item-laptop">
+    <p>
+      <a class="title" href="{{item.url}}">
+        {{item.title}}
+      </a>
+      <span class="domain">{{item.url}}</span>
+    </p>
+  </div>
+</div>
