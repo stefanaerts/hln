@@ -18,9 +18,14 @@ export class StoriesComponent implements OnInit {
   constructor(private _hackerNewsAPIService: HackerNewsAPIService) { }
 
   ngOnInit() {
-    this._hackerNewsAPIService.fetchStories()
+    // this._hackerNewsAPIService.fetchStories()
+    //   .subscribe(
+    //   items => this.items = items,
+    //   error => console.log('Error fetching stories'));
+    this._hackerNewsAPIService.fetchStories('news', 1)
       .subscribe(
       items => this.items = items,
       error => console.log('Error fetching stories'));
+
   }
 }
